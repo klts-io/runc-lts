@@ -1,0 +1,13 @@
+Source: runc
+Section: misc
+Priority: optional
+Maintainer: KLTS team <help@klts.io>
+Standards-Version: 3.9.4
+Homepage: https://klts.io
+Vcs-Git: https://github.com/klts-io/runc-lts.git
+Vcs-Browser: https://github.com/klts-io/runc-lts
+
+Package: runc
+Architecture: %{_arch}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: CLI tool for spawning and running containers according to the OCI specification
