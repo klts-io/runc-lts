@@ -24,13 +24,13 @@ for platform in ${BUILD_PLATFORMS[*]}; do
     arch="${platform#*/}"
     echo "Building ${platform}"
     rm -rf ~/.cache/go-build bin || :
-
+    rm -rf "_output/${os}/${arch}/runc" || :
+    mkdir -p "_output/${os}/${arch}/runc"
     docker run --rm -v $(pwd):/go/src/github.com/opencontainers/runc -w /go/src/github.com/opencontainers/runc golang:1.17 \
         /bin/bash -c "
     apt-get update && apt-get install libseccomp-dev
     GO111MODULE=auto GOOS=${os} GOARCH=${arch} make BUILDTAGS='${BUILDTAGS}' runc && \
-        mkdir -p _output/${os}/${arch}/ && \
-        mv runc _output/${os}/${arch}/ || :
+        mv runc _output/${os}/${arch}/runc/ || :
 " || echo "fail ${platform}"
 
 done
