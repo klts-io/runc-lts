@@ -1,0 +1,16 @@
+Package: runc
+Priority: optional
+Section: misc
+Installed-Size: 14372
+Maintainer: KLTS team <help@klts.io>
+Architecture: amd64
+Version: 1.0.2-lts.0
+Filename: pool/main/r/runc/runc_1.0.2-lts.0_amd64.deb
+Size: 5305448
+MD5sum: d8a591b4646e265561d05e43aa802cb8
+SHA1: a3df88d16a1ccc21c1051d988b3e492a870648f5
+SHA256: 0e7c6dddc850ff4c3dd2e5f585ceeab51d0699fb9f63a38d32242efe8b7bd3cd
+SHA512: 6bf3da6cf2eaf86ce0794a10b8c5d3294cd4803c66155460196e5ceb20174bc3bee110da354fc77179be8f26baa340a93c630b82c93e3bd891d3543e04cbfeaa
+Description: CLI tool for spawning and running containers according to the OCI specification
+Homepage: https://klts.io
+
