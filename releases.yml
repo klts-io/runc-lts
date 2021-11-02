@@ -2,12 +2,8 @@ base: https://github.com/opencontainers/runc
 
 releases:
   - name: v1.0.2-lts.0
-    base_release: v1.0.2-ci
-    must: true
-    patches:
-
-  - name: v1.0.2-ci
     base_release: v1.0.2
+    must: true
     patches:
  
 patches:
