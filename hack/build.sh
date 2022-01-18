@@ -29,7 +29,7 @@ for platform in ${BUILD_PLATFORMS[*]}; do
     docker run --rm -v $(pwd):/go/src/github.com/opencontainers/runc -w /go/src/github.com/opencontainers/runc golang:1.17 \
         /bin/bash -c "
     apt-get update && apt-get install libseccomp-dev
-    GO111MODULE=auto GOOS=${os} GOARCH=${arch} make BUILDTAGS='${BUILDTAGS}' runc && \
+    GO111MODULE=auto GOOS=${os} GOARCH=${arch} CGO_ENABLED=1 make BUILDTAGS='${BUILDTAGS}' runc && \
         mv runc _output/${os}/${arch}/runc/ || :
 " || echo "fail ${platform}"
 
